@@ -16,8 +16,8 @@ function GetURLParameter(sParam)
     }
 }​
 
-var id = GetURLParameter("id")
+var id = GetURLParameter("id");
 
 if (id == "inst") {
-  this.window = "https://github.com/enorsu"
+  this.window = "https://github.com/enorsu";
 }
