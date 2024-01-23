@@ -4,11 +4,6 @@ function redirect_github() {
   window.location = "https://github.com/enorsu";
 }
 
-// redirect function for easy access
-function goto(URL) {
-  window.location = URL;
-}
-
 
 //redirects
 const queryString =  window.location.search;
