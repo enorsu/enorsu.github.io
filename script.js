@@ -18,5 +18,5 @@ const urlParams = new URLSearchParams(queryString);
 
 const redir = urlParams.get("r");
 
-if (redir = "github") {goto("https://github.com/enorsu");}
+if (redir = "github") {redirect_github();}
 
