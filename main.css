@@ -107,7 +107,7 @@ html {
   box-sizing: content-box;
   cursor: pointer;
 
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font: normal 13px/normal Verdana, Geneva, sans-serif;
