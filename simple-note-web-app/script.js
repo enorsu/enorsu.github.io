@@ -106,7 +106,7 @@ function doSpecifiedFunction(node) {
     }
   } else if(action == "del") {
     document.body.removeChild(node);
-    localStorage.removeItem(node.innerHTML - 1);
+    ;
   }
 }
     
@@ -129,7 +129,6 @@ function add_note() {
     button.setAttribute("value", noteCount);
     button.innerHTML = spawnTXT.value;
     document.body.appendChild(button);
-    noteArray[noteCount] = spawnTXT.value;
    }
 
 
@@ -213,3 +212,7 @@ function askNotificationPermission() {
     });
   }
   
+  window.addEventListener("pointerleave", function(event) {
+    event.preventDefault();
+    return;
+  });
