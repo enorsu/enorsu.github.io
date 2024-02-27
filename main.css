@@ -23,7 +23,8 @@
   }
 
 .button-green:hover {
-    font: normal 24px/normal Verdana, Geneva, sans-serif;
+    padding: 20px 40px;
+    font: normal 40px/normal Verdana, Geneva, sans-serif;
 }
 
   .default-text {
