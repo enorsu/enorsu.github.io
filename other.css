@@ -1,0 +1,30 @@
+
+.goofy-button {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    font: normal 20px/normal "Comic Sans MS", cursive, sans-serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #d88602;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+
+    transition-duration: 1000ms;
+    transform: translateY(0px, 0px);
+  }
+
+
+  .goofy-button:hover {
+    transition-duration: 100ms;
+    transform: translate(1000%)
+  }
+
