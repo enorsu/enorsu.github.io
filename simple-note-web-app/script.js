@@ -14,8 +14,43 @@ var spawnTXT = document.getElementById("spawntxt");
 
 spawnBTN = document.getElementById("spawnbtn");
 
-spawnBTN.addEventListener("click", add_button);
+spawnBTN.addEventListener("click", add_note);
 
+
+//deleteAllNoteBtn = document.getElementById("delete-all-notes");
+//deleteAllNoteBtn.addEventListener("click", deleteAllNotes);
+
+var getNotesBtn = document.getElementById("get-notes-storage");
+getNotesBtn.addEventListener("click", get_notes);
+
+var clearNotesBtn = document.getElementById("clear-notes-storage");
+clearNotesBtn.addEventListener("click", clearLocalStorage);
+
+var notificationsBtnClicked;
+
+var buttonTemp;
+
+var clickAction;
+var action;
+
+var tempNoteStore;
+
+var tempNoteStore1;
+
+function clearLocalStorage() {
+  localStorage.clear();
+}
+
+
+function get_notes() {
+  for(var i = 1; i < localStorage.length + 1; i++) {
+    console.log(localStorage.getItem(i));
+    addNoteRaw(localStorage.getItem(i));
+  }
+}
+function deleteAllNotes() {
+  window.location = "";
+}
 
 
 function deleteNote(node) {
@@ -24,36 +59,85 @@ function deleteNote(node) {
     
 }
 
-function addClipboard(node) {
+//function addClipboard(node) {
+//    navigator.clipboard.writeText(node.innerHTML);
+//    if(notificationsBtnClicked) {
+//      const clipboardNotification = new Notification(title="Copied to clipboard", {body: "Copied text: " + node.innerHTML + " to clipboard."});
+//    }
+//
+//  }
+
+
+function doSpecifiedFunction(node) {
+  clickAction = document.getElementById("actions");
+  action = clickAction.value;
+  if(action == "copy") {
     navigator.clipboard.writeText(node.innerHTML);
-    const clipboardNotification = new Notification(title="Copied to clipboard", {body: "Copied text: " + node.innerHTML + " to clipboard."});
+    if(notificationsBtnClicked) {
+      const clipboardNotification = new Notification(title="Copied to clipboard", {body: "Copied text: " + node.innerHTML + " to clipboard."});
+    }
+  } else if(action == "del") {
+    document.body.removeChild(node);
+  }
 }
-function add_button() {
+    
+function add_note() {
     noteCount++;
 
-    randomX = Math.random() * width;
-    randomY = Math.random() * height;
+    //randomX = Math.random() * width;
+    //randomY = Math.random() * height;
 
-    randomX = Math.round(randomX);
-    randomY = Math.round(randomY);
+    //randomX = Math.round(randomX);
+    //randomY = Math.round(randomY);
 
     // console.log(randomX, randomY);
     
-
+    saveNote(spawnTXT.value, noteCount);
     var button = document.createElement("a");
     var seperator = document.createElement("br");
     button.setAttribute("class", "fancy-note");
-    button.setAttribute("onclick", "addClipboard(this);");
+    button.setAttribute("onclick", "doSpecifiedFunction(this);");
     button.setAttribute("id", noteCount);
     button.innerHTML = spawnTXT.value;
-    document.body.appendChild(button);
+    document.body.appendChild(button); }
 
-    var deleteButton = document.createElement("a");
-    deleteButton.setAttribute("class", "fancy-note-remove");
-    deleteButton.setAttribute("onclick", "deleteNote(this);");
-    deleteButton.innerHTML = "X";
-    document.body.appendChild(deleteButton);
 
+
+function addNoteRaw(note, removeQuotes) {
+  tempNoteStore1 = note;
+  removeQuotes = true;
+  if(removeQuotes) {
+    tempNoteStore1 = tempNoteStore1.replace(/['"]+/g, '');
+  }
+  var button = document.createElement("a");
+  var seperator = document.createElement("br");
+  button.setAttribute("class", "fancy-note");
+  button.setAttribute("onclick", "doSpecifiedFunction(this);");
+  button.setAttribute("id", noteCount);
+  button.innerHTML = tempNoteStore1;
+  document.body.appendChild(button);
+}
+    
+
+    
+
+//   var deleteButton = document.createElement("a");
+//    deleteButton.setAttribute("class", "fancy-note-remove");
+//    deleteButton.setAttribute("onclick", "deleteNote(this);");
+//    deleteButton.innerHTML = "X";
+//    document.body.appendChild(deleteButton); 
+
+    
+
+
+
+function saveNote(note, noteNumber) {
+    localStorage.setItem(noteNumber, JSON.stringify(note));
+}
+
+function getNote() {
+    tempNoteStore = prompt("Please enter a note number");
+    alert(JSON.parse(localStorage.getItem(tempNoteStore)));
 }
 
 
@@ -73,6 +157,7 @@ function askNotificationPermission() {
     Notification.requestPermission().then((permission) => {
       // set the button to shown or hidden, depending on what the user answers
       notificationBtn.style.display = permission === "granted" ? "none" : "block";
+      notificationsBtnClicked = true;
       const test =  new Notification(title="Notification permission granted");
       setTimeout(function() {
         test.close();
