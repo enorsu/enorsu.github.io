@@ -13,17 +13,30 @@ var scaleSlider = document.getElementById('scale');
 var playBtn = document.getElementById('click-play');
 playBtn.addEventListener('click', play);
 
+var playing = false;
+
 
 scaleSliderF()
 
 function play() {
-    playBtn.style.visibility = 'hidden';
-    videoPlayer.play();
+    if(playing) {
+        videoPlayer.style.visibility = "hidden";
+        playing = false;
+        playBtn.innerHTML = "click to play";
+        videoPlayer.pause();
+
+    } else {
+        videoPlayer.style.visibility = "visible";
+        playing = true;
+        playBtn.innerHTML = "click to stop playing";
+        videoPlayer.play();
+    }
+;
 }
 
 function pause() {
     videoPlayer.pause();
-    scaleSliderF();
+    
 }
 
 function scaleVideo(size) {
@@ -31,9 +44,6 @@ function scaleVideo(size) {
     videoPlayer.height = 360 * size;
 }
 
-function scaleSliderF() {
-    scaleVideo(scaleSlider.value);
-}
 
 
 document.body.oncontextmenu = function() {alert("right click is disabled :)"); return false;}
