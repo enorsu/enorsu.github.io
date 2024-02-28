@@ -10,9 +10,14 @@ pauseButton.addEventListener('click', pause);
 
 var scaleSlider = document.getElementById('scale');
 
+var playBtn = document.getElementById('click-play');
+playBtn.addEventListener('click', play);
+
+
 scaleSliderF()
 
 function play() {
+    playBtn.style.visibility = 'hidden';
     videoPlayer.play();
 }
 
@@ -31,3 +36,4 @@ function scaleSliderF() {
 }
 
 
+document.body.oncontextmenu = function() {alert("right click is disabled :)"); return false;}

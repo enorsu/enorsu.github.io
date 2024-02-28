@@ -9,6 +9,10 @@ function redirect_notes() {
   window.location.href = "simple-note-web-app";
 }
 
+function redirect_videoplayer() {
+  window.location.href = "video-player";
+}
+
 function doit() {
   alert("wait, that's illegal");
 }

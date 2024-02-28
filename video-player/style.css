@@ -40,3 +40,9 @@ button:hover {
     left: 50%;
     margin: -180px 0 0 -240px;
 }
+
+.clickable-text {
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif
+
+}
