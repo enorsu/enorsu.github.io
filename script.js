@@ -13,6 +13,10 @@ function redirect_videoplayer() {
   window.location.href = "video-player";
 }
 
+function redirect_clickcube() {
+  window.location.href = "try-to-click-the-cube";
+}
+
 function doit() {
   alert("wait, that's illegal");
 }
