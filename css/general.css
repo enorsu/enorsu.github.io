@@ -65,10 +65,10 @@ section {
 }
 
 @font-face {
-  font-family: OtherFont; 
+  font-family: BluuNext-Bold; 
   src: url("./fonts/BluuNext-Bold.otf");
 }
 
 body, h2, h3 {
-  font-family: OtherFont;
+  font-family: BluuNext-Bold;
 }
