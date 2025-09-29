@@ -64,3 +64,11 @@ section {
   padding-bottom: 30px;
 }
 
+@font-face {
+  font-family: OtherFont; 
+  src: url("./fonts/BluuNext-Bold.otf");
+}
+
+body, h2, h3 {
+  font-family: OtherFont;
+}
