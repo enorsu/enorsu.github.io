@@ -4,16 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <link rel="stylesheet" href="./css/pico.min.css">
-    <link rel="stylesheet" href="./css/social-circles.min.css">
+    <link rel="stylesheet" href="./css/libraries/social-circles.min.css">
+    <link rel="stylesheet" href="./css/libraries/pico.min.css">
+    <link rel="stylesheet" href="./css/anim.css">
+    <link rel="stylesheet" href="./css/libraries/aos.css" />
+    <script src="./css/anim.js" defer></script>
+
 
     <meta name="description" content="enorsu's website(and about me)">
   </head>
-  <body>
+  <body id="body">
     <header class="container">
+      <section>
       <h1>enorsu's website(and about me)</h1>
       <p><a href="./old/index.html">click to enter old, badly made website</a></p>
-      <img src="./img/pfp.webp" style="border-radius: 100%; cursor: pointer;" onclick="window.open('https://discord.com/users/682458480610770964')">
+      <img src="./img/pfp.webp" style="border-radius: 100%; cursor: pointer;" onclick="window.open('https://discord.com/users/682458480610770964')" class="pfp">
+      </section>
     </header>
     <main class="container">
       <section id="about-me">
@@ -83,6 +89,13 @@
       <small
         >Built with <a href="https://picocss.com">Pico</a> •
         <a href="https://github.com/enorsu/enorsu.github.io">Source code</a></small>
+        <br>
+        <small>Used libraries:</small>
+        <ul style="font-size: smaller;">
+          <li><a href="github.com/janhuenermann/social-circles">Social Circles</a></li>
+        </ul>
     </footer>
+    <script src="./css/libraries/aos.js"></script>
+    <script>AOS.init()</script>
   </body>
 </html>
