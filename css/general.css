@@ -51,9 +51,7 @@ seaaaction:hover {
   
 }
 
-pfp {
-  animation: 10s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s infinite glow2;
-}
+
 
 #section {
   border-radius: 19px;
