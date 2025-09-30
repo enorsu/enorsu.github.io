@@ -1,7 +1,8 @@
 
 :root {
     --timing: cubic-bezier(0.19, 1, 0.22, 1);
-    --delay : 1s
+    --delay : 1s;
+    --dl: 600ms;
 }
 .none {
     animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
@@ -54,10 +55,21 @@ pfp {
   animation: 10s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s infinite glow2;
 }
 
-section {
+#section {
   border-radius: 19px;
   padding: 30px;
   animation: 10s cubic-bezier(0.6, 0.04, 0.98, 0.335) 0s infinite glow2;
+}
+
+section:hover {
+  box-shadow: 0px 0px 66px 4px rgba(75, 123, 255, 0.9);
+}
+
+section {
+  box-shadow: 0px 0px 33px 4px rgba(75, 123, 255, 0.9);
+  border-radius: 19px;
+  padding: 30px;
+  transition-duration: var(--dl);
 }
 
 #socials {
@@ -65,10 +77,10 @@ section {
 }
 
 @font-face {
-  font-family: BluuNext-Bold; 
-  src: url("./fonts/BluuNext-Bold.otf");
+  font-family: CothamSans; 
+  src: url("./fonts/CothamSans.otf");
 }
 
-body, h2, h3 {
-  font-family: BluuNext-Bold;
+body, h2, h3, h1 {
+  font-family: CothamSans;
 }
