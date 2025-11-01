@@ -45,7 +45,8 @@ showAuthors = true        # Show authors on post page
 showCategories = true     # Show categories on post page
 
   [params.author]
-    name = "enorsu's personal website & blog"  # Website and RSS feed author
+    name = "enorsu's personal website & blog"
+    avatar = "https://cdn.discordapp.com/avatars/682458480610770964/358733c6a68b88c6fe6ef7bfe33a4b7c.webp?size=1024"  # Website and RSS feed author
 
 [[params.social]]
 key = 0
