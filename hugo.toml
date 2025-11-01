@@ -55,3 +55,7 @@ name = "youtube channel"
 url = "https://youtube.com/@enorsu"
 target = "_blank"
 aria = "YouTube Channel"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
