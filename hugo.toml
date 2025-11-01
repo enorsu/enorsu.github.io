@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'enorsu.github.io'
 theme = "nightfall"
 
+
+
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -22,6 +25,8 @@ pagerSize = 3
     url = "about"
 
 [params]
+custom_css = ["css/custom.css"]
+
 user = "me"
 hostname = "enorsu.github.io"
 

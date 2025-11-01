@@ -1,0 +1,27 @@
+
+@font-face {
+  font-family: CothamSans; 
+  src: url("/fonts/CothamSans.otf");
+}
+
+h1, h2, h3, ul, p, span {
+    font-family: CothamSans;
+}
+h1:hover, h2:hover, h3:hover, ul:hover, p:hover {
+
+    transition-duration: 400ms;
+}
+
+a {
+    transition-duration: 300ms;
+}
+a:hover {
+    transition-duration: 300ms;
+    color: rgb(71, 129, 255);
+}
+
+li > a:hover {
+        transition-duration: 300ms;
+    color: rgb(71, 129, 255);
+}
+
