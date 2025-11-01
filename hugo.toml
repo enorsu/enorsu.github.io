@@ -16,9 +16,9 @@ pagerSize = 3
 
 [menu]
   [[menu.header]]
-    name = "blog"
+    name = "blog-posts"
     weight = 0
-    url = "blog"
+    url = "posts"
   [[menu.header]]
     name = "about"
     weight = 1
@@ -26,9 +26,10 @@ pagerSize = 3
 
 [params]
 custom_css = ["css/custom.css"]
-
+color = "blue"
 user = "me"
 hostname = "enorsu.github.io"
+
 
 # You can configure external links to open in new tabs by adding this parameter
 openLinksInNewTab = true
@@ -39,8 +40,8 @@ displayDateFormat = "1.02.2006"
 # Each can be overridden in individual post frontmatter
 showMetadata = true       # Master switch for all metadata display
 showPublishedDate = true  # Show published date on post page
-showReadingTime = true    # Show reading time on post page
-showTags = true           # Show tags on post page
+showReadingTime = false    # Show reading time on post page
+showTags = false           # Show tags on post page
 showAuthors = true        # Show authors on post page
 showCategories = true     # Show categories on post page
 
