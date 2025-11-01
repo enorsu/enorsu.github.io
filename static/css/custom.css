@@ -11,6 +11,10 @@ h1:hover, h2:hover, h3:hover, ul:hover, p:hover {
     transition-duration: 400ms;
 }
 
+li {
+    line-height: 150%;
+}
+
 a {
     transition-duration: 300ms;
 }
