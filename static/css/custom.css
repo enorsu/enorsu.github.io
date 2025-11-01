@@ -8,7 +8,6 @@ h1, h2, h3, ul, p, span {
     font-family: CothamSans;
 }
 h1:hover, h2:hover, h3:hover, ul:hover, p:hover {
-
     transition-duration: 400ms;
 }
 
