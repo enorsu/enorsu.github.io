@@ -6,7 +6,7 @@ title = 'About me'
 
 My online nickname is enorsu. I enjoy programming sometimes.
 
-Favourite programming languages:
+Favourite programming/markup languages:
 - HTML, CSS, JS
 - Python
 
